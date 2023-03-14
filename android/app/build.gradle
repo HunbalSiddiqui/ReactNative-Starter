@@ -93,9 +93,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.styles02"
+    namespace "com.passwordgenerator"
     defaultConfig {
-        applicationId "com.styles02"
+        applicationId "com.passwordgenerator"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

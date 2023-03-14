@@ -1,4 +1,4 @@
-package com.styles02;
+package com.passwordgenerator;
 
 import android.app.Application;
 import com.facebook.react.PackageList;

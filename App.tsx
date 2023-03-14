@@ -1,23 +1,47 @@
-import { SafeAreaView, ScrollView } from 'react-native'
-import React from 'react'
-import FlatCards from './components/FlatCards'
-import ElevatedCards from './components/ElevatedCards'
-import FancyCard from './components/FancyCard'
-import ActionCard from './components/ActionCard'
-import ContactList from './components/ContactList'
+import { StyleSheet, Text, View } from 'react-native'
+import React, { useState } from 'react'
+import * as Yup from 'yup'
 
-const App = () => {
+const PasswordSchema = Yup.object()
+  .shape({
+    passwordLength: Yup.number()
+      .min(4, 'Should be min of 4 characters.')
+      .max(16, 'Should be max of 16 characters.')
+      .required('Length is required.')
+  })
+
+export default function App() {
+  const [password, setPassword] = useState('')
+  const [isPasswordGenerated, setIsPasswordGenerated] = useState(false)
+  const [lowerCase, setLowerCase] = useState(false)
+  const [upperCase, setUpperCase] = useState(false)
+  const [numbers, setNumbers] = useState(false)
+  const [symbols, setSymbols] = useState(false)
+
+  const generatePassowrdString = (passLength: number) => {
+
+  }
+
+  const createPassword = (characters: string, passLenght: number) => {
+    let result = '';
+
+    for (let index = 0; index < passLenght; index++) {
+      const characterIndex = Math.round(Math.random() * characters.length)
+      result += characters.charAt(characterIndex)
+    }
+
+    return result
+  }
+
+  const resetPasswordState = () => {
+
+  }
+
   return (
-    <SafeAreaView>
-      <ScrollView>
-        <FlatCards />
-        <ElevatedCards />
-        <FancyCard />
-        <ActionCard />
-        <ContactList />
-      </ScrollView>
-    </SafeAreaView>
+    <View>
+      <Text>Appp</Text>
+    </View>
   )
 }
 
-export default App
+const styles = StyleSheet.create({})

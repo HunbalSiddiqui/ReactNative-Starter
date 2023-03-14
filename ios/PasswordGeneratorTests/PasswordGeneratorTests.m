@@ -7,11 +7,11 @@
 #define TIMEOUT_SECONDS 600
 #define TEXT_TO_LOOK_FOR @"Welcome to React"
 
-@interface styles02Tests : XCTestCase
+@interface PasswordGeneratorTests : XCTestCase
 
 @end
 
-@implementation styles02Tests
+@implementation PasswordGeneratorTests
 
 - (BOOL)findSubviewInView:(UIView *)view matching:(BOOL (^)(UIView *view))test
 {
